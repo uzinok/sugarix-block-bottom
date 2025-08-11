@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,600&family=Roboto+Slab:wght@600&display=swap');
+
+@font-face {
+	font-weight: 700;
+	font-family: 'HeadingNow Trial';
+	font-style: italic;
+	src: url(../../fonts/fonnts.com-HeadingNowTrial-46BoldItalic.woff2) format('woff2'),
+		url(../../fonts/fonnts.com-HeadingNowTrial-46BoldItalic.woff) format('woff');
+	font-display: swap;
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+img {
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.container {
+	box-sizing: border-box;
+	max-width: 340px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 10px;
+}
+
+.container::before {
+	content: '';
+	position: absolute;
+	bottom: 6%;
+	left: calc(50% - 74px);
+	z-index: -1;
+	width: 274px;
+	height: 410px;
+	background-image: url(../../img/people-bottom.png);
+	background-repeat: no-repeat;
+	background-position: 50% bottom;
+	background-size: contain;
+	transform: translateX(-50%);
+}
+
+.bottom {
+	position: relative;
+	padding-top: 57px;
+	background-image: url(../../img/bg.png);
+	background-repeat: no-repeat;
+	background-position: center -230px;
+}
+
+.title {
+	display: grid;
+	margin: 0 0 6px;
+	font-weight: 700;
+	font-size: 53px;
+	line-height: 100%;
+	font-family: 'HeadingNow Trial', sans-serif;
+	color: #196501;
+	text-transform: uppercase;
+	font-style: italic;
+	-webkit-text-stroke: 0.5px #ffffff;
+}
+
+.title span {
+	margin: -4px;
+	padding: 4px;
+	background: linear-gradient(to top, #196501, #33cb03);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
+}
+
+.title span:nth-child(even) {
+	justify-self: end;
+}
+
+@media (max-width: 370px) {
+	.title span:nth-child(even) {
+		margin-right: -10px;
+	}
+}
+
+.subtitle {
+	width: 59%;
+	margin: 0 0 20px auto;
+	font-weight: 600;
+	font-size: 35px;
+	line-height: 110%;
+	color: #FB841D;
+	font-style: italic;
+	background: linear-gradient(to top, #FB841D, #F2A014);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
+}
+
+@media (max-width: 370px) {
+	.subtitle {
+		margin-right: -10px;
+	}
+}
+
+.badges {
+	display: flex;
+	width: fit-content;
+	margin: 0 -14px 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+.badges img {
+	width: 53px;
+	height: 53px;
+}
+
+.hca {
+	display: block;
+	width: 73px;
+	height: 73px;
+	margin-left: 54%;
+}
+
+.prod-tube {
+	position: relative;
+	display: grid;
+	grid-template-columns: 41px 38px 17px 38px 37px;
+	grid-template-rows: 16px auto 16px;
+	width: fit-content;
+	margin: -27px 0 0 20%;
+}
+
+.prod-tube::before {
+	content: '';
+	position: absolute;
+	top: -16px;
+	left: 58%;
+	z-index: -1;
+	width: 250px;
+	height: 204px;
+	background-image: url(../../img/decor.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	transform: translateX(-50%);
+}
+
+.prod-tube--3 img:first-child {
+	grid-column-end: 3;
+	grid-column-start: 1;
+	grid-row-end: -1;
+	grid-row-start: 2;
+}
+
+.prod-tube--3 img:nth-child(2) {
+	position: relative;
+	z-index: 1;
+	grid-column-end: 5;
+	grid-column-start: 2;
+	grid-row-end: 2;
+}
+
+.prod-tube--3 img:nth-child(3) {
+	grid-column-end: -1;
+	grid-column-start: 4;
+	grid-row-end: -1;
+	grid-row-start: 2;
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 8px 18px;
+	font-weight: 700;
+	font-size: 52px;
+	line-height: 100%;
+	font-family: 'HeadingNow Trial', sans-serif;
+	text-align: center;
+	color: #5F0000;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-style: italic;
+	text-shadow: -1.3px 1.3px 0.6px #ffffff;
+	background-color: #FB841D;
+	background-image: linear-gradient(to top, #F46F01, #FFAC00 36%, #FE5800 80%);
+	border-width: 4px 5px;
+	border-style: solid;
+	border-color: #c5c5c5;
+	border-radius: 17px;
+	appearance: none;
+	gap: 6px;
+}
+
+.button::after {
+	content: '';
+	display: block;
+	width: 28px;
+	height: 37px;
+	background-image: url(../../img/button-arrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.bottom .button {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	max-width: 320px;
+	margin-top: -20px;
+}
+
+@media (max-width: 370px) {
+	.bottom .button {
+		width: auto;
+		margin-right: -10px;
+		margin-left: -10px;
+	}
+
+}

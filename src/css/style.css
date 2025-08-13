@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,600&family=Roboto+Slab:wght@600&display=swap');
+
+@font-face {
+	font-family: 'HeadingNow Trial';
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+	src: url(../fonts/fonnts.com-HeadingNowTrial-46BoldItalic.ttf) format('truetype');
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+img {
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.container {
+	max-width: 320px;
+	padding: 0 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container::before {
+	content: '';
+	position: absolute;
+	width: 274px;
+	height: 410px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-image: url(../img/people-bottom.png);
+	background-repeat: no-repeat;
+	background-position: 50% bottom;
+	background-size: contain;
+	z-index: -1;
+}
+
+section {
+	background-image: url(../img/bg.png);
+	background-position: center -230px;
+	background-repeat: no-repeat;
+	padding-top: 57px;
+}
+
+.title {
+	font-family: 'HeadingNow Trial', sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	font-size: 53px;
+	line-height: 100%;
+	display: grid;
+	color: #196501;
+	-webkit-text-stroke: 0.5px #ffffff;
+}
+
+.title span {
+	padding: 4px;
+	margin: -4px;
+	background: linear-gradient(to top, #196501, #33cb03);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+.title span:nth-child(even) {
+	justify-self: end;
+}
+
+.subtitle {
+	font-weight: 600;
+	font-size: 35px;
+	font-style: italic;
+	line-height: 100%;
+
+	background: linear-gradient(to top, #FB841D, #F2A014);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	color: #FB841D;
+}
+
+.badges {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+.badges img {
+	width: 53px;
+	height: 53px;
+}
+
+.hca {
+	width: 73px;
+	height: 73px;
+	display: block;
+}
+
+.prod-tube {
+	position: relative;
+	display: grid;
+	grid-template-columns: 41px 17px 17px 17px 38px;
+	grid-template-rows: 16px auto 16px;
+	width: fit-content;
+}
+
+.prod-tube::before {
+	content: '';
+	width: 250px;
+	height: 180px;
+	position: absolute;
+	z-index: -1;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	background-image: url(../img/decor.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.prod-tube--3 img:first-child {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: -1;
+}
+
+.prod-tube--3 img:nth-child(2) {
+	grid-column-start: 2;
+	grid-column-end: 5;
+	grid-row-end: 2;
+	position: relative;
+	z-index: 1;
+}
+
+.prod-tube--3 img:nth-child(3) {
+	grid-column-start: 4;
+	grid-column-end: -1;
+	grid-row-start: 2;
+	grid-row-end: -1;
+}
+
+.button {
+	display: inline-flex;
+	gap: 6px;
+	appearance: none;
+	text-decoration: none;
+	text-align: center;
+	border-color: #c5c5c5;
+	border-width: 4px 5px;
+	padding: 16px 20px;
+	border-style: solid;
+	border-radius: 17px;
+	font-family: 'HeadingNow Trial', sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	font-size: 52px;
+	color: #5F0000;
+	text-shadow: -1.3px 1.3px 0.6px #ffffff;
+	line-height: 100%;
+	background-color: #FB841D;
+	background-image: linear-gradient(to top, #F46F01, #FFAC00 36%, #FE5800 80%);
+}
+
+.button::after {
+	content: '';
+	display: block;
+	width: 28px;
+	height: 37px;
+	background-image: url(../img/button-arrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
